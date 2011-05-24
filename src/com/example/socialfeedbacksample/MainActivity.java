@@ -1,10 +1,11 @@
 package com.example.socialfeedbacksample;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,7 +16,7 @@ import com.example.web.MyWebViewClient;
 public class MainActivity extends Activity
 	implements OnClickListener
 {
-	private final String GREE_SHARE_URL = "http://share.gree.jp/share?url=";
+	private final String GREE_SHARE_URL = "http://gree.jp/?mode=share&act=write&url=";
 	private final String GREE_SHARE_TYPE = "&type=2&height=20";
 
     /** Called when the activity is first created. */
@@ -53,7 +54,7 @@ public class MainActivity extends Activity
     		String strEditUrl = edit.getText().toString();
 
     		WebView webview = (WebView)findViewById(R.id.webview);
-    		webview.loadUrl(GREE_SHARE_URL + strEditUrl + GREE_SHARE_TYPE);
+    		webview.loadUrl(GREE_SHARE_URL + Uri.encode(strEditUrl) + GREE_SHARE_TYPE);
     	}
 
     }
