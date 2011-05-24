@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SocialFeedbackSample</string>
+    <string name="message">お待ちくだされ</string>
+    <string name="default_url">http://falcon-5.com</string>
+    <string name="hint_input_url">おすすめURL</string>
+</resources>
